@@ -1,8 +1,9 @@
 const Sequelize = require('sequelize');
 const dbConfigs = require('../../config/db');
 const User = require('./user');
-const Garden = require('./garden');
-const UserGarden = require('./user-garden');
+const Medicine = require('./medicine');
+const Prescription = require('./prescription');
+const MedicinePrescription = require('./medicine-prescription');
 
 
 const env = process.env.NODE_ENV || 'development';
@@ -17,8 +18,9 @@ if (config.use_env_variable) {
 }
 
 db.User = User(sequelize, Sequelize);
-db.Garden = Garden(sequelize, Sequelize);
-db.UserGarden = UserGarden(sequelize, Sequelize);
+db.Medicine = Medicine(sequelize, Sequelize);
+db.Prescription = Prescription(sequelize, Sequelize);
+db.MedicinePrescription = MedicinePrescription(sequelize, Sequelize);
 
 Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {

@@ -30,10 +30,6 @@ app.use(expressEasyZip());
 
 // Setup Database
 const sequelizeDB = require('./models');
-const mongodb = require('./models/mongo');
-
-mongodb.setup();
-
 
 const SequelizeStore = ConnectSessionSequelize(Session.Store);
 

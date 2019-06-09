@@ -21,7 +21,7 @@ const common = {
     dialectOptions: {
       ssl: true
     },
-    logging: false
+    logging: true
   }
 };
 

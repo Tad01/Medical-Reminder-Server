@@ -29,6 +29,12 @@ const WS_EVENTS = {
   garden2Station: 'garden2station'
 };
 
+const USER_TYPE = {
+  doctor: 1,
+  patient: 2
+};
+
 module.exports = {
-  WS_EVENTS
+  WS_EVENTS,
+  USER_TYPE
 };

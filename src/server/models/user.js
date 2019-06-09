@@ -12,12 +12,15 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     description: DataTypes.STRING,
-    type: DataTypes.INTEGER
+    type: DataTypes.INTEGER,
+    address: DataTypes.STRING,
+    birthday: DataTypes.DATE
   }, {
     underscored: true
   });
   User.associate = (models) => {
-    User.belongsToMany(models.Garden, { through: models.UserGarden, foreignKey: 'user_id', otherKey: 'garden_id' });
+    User.hasMany(models.Prescription, { foreignKey: 'doctor_id' });
+    User.hasMany(models.Prescription, { foreignKey: 'patient_id' });
   };
   return User;
 };
