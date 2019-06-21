@@ -5,7 +5,7 @@ export default class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <header>HỆ THỐNG VƯỜN THÔNG MINH - INSYS SMART GARDEN</header>
+        <header>HỆ THỐNG NHẮC NHỞ UỐNG THUỐC CHO NGƯỜI LỚN TUỔI - MEDICAL REMINDER APP</header>
       </React.Fragment>
     );
   }
