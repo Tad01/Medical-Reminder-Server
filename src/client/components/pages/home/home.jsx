@@ -14,41 +14,41 @@ export default class extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="card">
-          <div className="card-body">
-            <div className="form-header default-color">
-              <h3><i className="fas fa-lock" /> Login:</h3>
+        <div className="d-flex justify-content-center align-items-center w-100 h-100">
+          <form className="text-center border border-light p-5">
+            <p className="h4 mb-4">Sign in</p>
+            <input type="email" id="defaultLoginFormEmail" className="form-control mb-4" placeholder="E-mail" />
+            <input type="password" id="defaultLoginFormPassword" className="form-control mb-4" placeholder="Password" />
+            <div className="d-flex justify-content-around">
+              <div>
+                <div className="custom-control custom-checkbox">
+                  <input type="checkbox" className="custom-control-input" id="defaultLoginFormRemember" />
+                  <label className="custom-control-label" htmlFor="defaultLoginFormRemember">Remember me</label>
+                </div>
+              </div>
+              <div>
+                <a href="/ádfadsf">Forgot password?</a>
+              </div>
             </div>
-            <div className="md-form">
-              <i className="fas fa-envelope prefix grey-text" />
-              <input type="text" id="defaultForm-email" className="form-control" />
-              <label htmlFor="defaultForm-email" className="">Your email</label>
-            </div>
-
-            <div className="md-form">
-              <i className="fas fa-lock prefix grey-text" />
-              <input type="password" id="defaultForm-pass" className="form-control" />
-              <label htmlFor="defaultForm-pass" className="">Your password</label>
-            </div>
-
-            <div className="text-center">
-              <button type="button" className="btn btn-default waves-effect waves-light">Login</button>
-            </div>
-
-          </div>
-
-          <div className="modal-footer">
-            <div className="options">
-              <p>Not a member?
-                <button type="button">Sign Up</button>
-              </p>
-              <p>Forgot
-                <button type="button">Password?</button>
-              </p>
-            </div>
-          </div>
+            <button className="btn btn-info btn-block my-4" type="submit">Sign in</button>
+            <p>Not a member?
+              <a href="ádasd">Register</a>
+            </p>
+            <p>or sign in with:</p>
+            <button type="button" className="light-blue-text mx-2">
+              <i className="fab fa-facebook-f" />
+            </button>
+            <button type="button" className="light-blue-text mx-2">
+              <i className="fab fa-twitter" />
+            </button>
+            <button type="button" className="light-blue-text mx-2">
+              <i className="fab fa-linkedin-in" />
+            </button>
+            <button type="button" className="light-blue-text mx-2">
+              <i className="fab fa-github" />
+            </button>
+          </form>
         </div>
-
       </React.Fragment>
     );
   }
