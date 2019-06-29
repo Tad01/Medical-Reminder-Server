@@ -1,6 +1,8 @@
 const { User } = require('../models');
 
 module.exports = class {
+  
+
   static async authenticateByToken(accessToken) {
     if (!accessToken) return null;
     const user = await User.findOne({
@@ -13,6 +15,7 @@ module.exports = class {
     });
     return user;
   }
+
 
   static async authenticate(username, password, accessToken) {
     // TODO: check username & password from database

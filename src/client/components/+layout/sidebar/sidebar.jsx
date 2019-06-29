@@ -12,7 +12,7 @@ export default class Sidebar extends Component {
       // { type: 'url', url: '/my-garden', text: 'Quản Lý Vườn' },
       // { type: 'sepa rator' }
       { type: 'url', url: '/about', text: 'Thông Tin Cá Nhân' },
-      { type: 'url', url: '/manager-patients', text: 'Quản lý bệnh nhân'},
+      { type: 'url', url: '/manager-patients', text: 'Quản lý bệnh nhân' },
       { type: 'url', url: '/', text: 'Đăng xuất' }
     ];
   }
@@ -20,11 +20,15 @@ export default class Sidebar extends Component {
   render() {
     return (
       <React.Fragment>
-        
+
         <aside className="d-flex flex-column modern-scrollbar">
-          <div className="avatar">
-            <div className="doct">
-              Hi Doctor!
+          <div className="row ">
+            <div className="col-md-4">
+              <div className="aqua-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half  avarta">
+                
+                {/* <img src="https://image.flaticon.com/icons/svg/921/921130.svg" alt="" className="img" /> */}
+              </div>
+              <h6>Doctor</h6>
             </div>
           </div>
           {

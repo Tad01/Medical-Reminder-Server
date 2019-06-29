@@ -1,13 +1,17 @@
 aside {
   width: 250px;
   margin-left: 5%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  background-color: lightblue;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #fff;
+  border-radius: 20px;
+  height: 90%;
   a {
     padding: 10px;
     font-size: 16px;
     border-bottom: 1px solid #d4d4d4;
+    color: #fff;
+    background-color: #38b6ff;
     &.active {
       background: linear-gradient(45deg, #2a607d, #3997c1);
       color: #fff;
@@ -20,8 +24,21 @@ aside {
     margin: 0;
     border-color: #d4d4d4;
   }
-  .avarta{
-    papdiing:10%;
-    background-color: Blue;
+  .row{
+    color: #fff;
+    margin: 0 auto;
   }
+  .avarta{
+    width: 130px;
+    height: 130px;
+    margin-top:10px;
+  }
+  .img{
+    width: 300px;
+    height: 300px;
+  }
+  h6{
+    color: #333;
+  }
+  
 }

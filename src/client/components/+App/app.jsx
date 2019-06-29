@@ -25,15 +25,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <div> <Route path="/" exact component={Home} /> </div>
+        {/* <div> <Route path="/" exact component={Home} /> </div> */}
         <div id="body" className="d-flex">
-          
-          <SideBar />
+          {window.location.pathname === '/' ? null : <SideBar />}
           <div id="content">
-            {/* <Route path="/" exact component={Home} /> */}
+            <Route path="/" exact component={Home} /> 
             <Route path="/about" exact component={About} />
             <Route path="/manager-patients" exact component={ManagerPatients} />
-            
           </div>
         </div>
       </React.Fragment>

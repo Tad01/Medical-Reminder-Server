@@ -11,6 +11,7 @@ module.exports = async () => {
     password: 'tandat12',
     name: 'Nguyễn Tấn Đạt',
     email: 'tandatit19@gmail.com',
+    avarta: 'https://image.flaticon.com/icons/svg/921/921130.svg',
     type: USER_TYPE.doctor
   });
 
@@ -20,7 +21,8 @@ module.exports = async () => {
     password: 'patient_1',
     name: 'patientName',
     address: 'Hồ chí Minh',
-    birthday: ' 1997-10-12 '
+    birthday: ' 1997-10-12 ',
+    avarta: 'https://image.flaticon.com/icons/svg/145/145859.svg'
   });
 
   const thuocParadol = await Medicine.upsert({
