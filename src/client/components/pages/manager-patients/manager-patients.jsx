@@ -35,52 +35,30 @@ export default class extends Component {
               {/* hiển thị danh sách bệnh nhân */}
 
               <div className="row">
-
-
+                <div className="col-md-4 mb-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />                 
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />   
+                </div>
                 <div className="col-md-4 mb-4">
                   <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
-                  
                 </div>
-
-                <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
-                  
-                </div>
-
-                <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
-                  
-                </div>
-
-
               </div>
-
-
-
               <div className="row">
-
-
                 <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
-                  
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />    
                 </div>
-
-
                 <div className="col-md-4 mb-4">
                   <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
                 </div>
-
-
-
                 <div className="col-md-4">
                   <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
                 </div>
-
-
               </div>
-              <nav aria-label="Page navigation example">
-                <ul className="pagination justify-content-center">
-                  <li className="page-item disabled">
+              <nav aria-label="Page navigation example ">
+                <ul className="pagination justify-content-center ">
+                  <li className="page-item disabled page">
                     <a className="page-link" href="/#" tabIndex="-1">Previous</a>
                   </li>
                   <li className="page-item"><a className="page-link" href="/#">1</a></li>
