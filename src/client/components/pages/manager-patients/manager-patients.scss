@@ -15,14 +15,23 @@
   border-radius: 20px;
 }
 .box{
-  padding-top: 3%;
+  padding-top: 1%;
   height: 95%;
 }
 .control{
   width:200px;
   float: right;
 }
-h1{
+h5{
   text-align: center;
   color: #fff;
+  text-justify: inter-cluster;
+}
+nav{
+  border-radius: 20px;
+}
+
+.avarta{
+  width: 100px;
+  height: 100px;
 }

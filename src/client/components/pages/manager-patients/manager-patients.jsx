@@ -20,7 +20,7 @@ export default class extends Component {
               {/* <div className="control">
                 <button type="button" className="btn btn-light">Thêm bệnh nhân</button> <br />
               </div> */}
-              <nav className="navbar navbar-expand-lg navbar-dark blue lighten-3 mb-4">
+              <nav className="navbar navbar-expand-lg navbar-dark  lighten-3 mb-4">
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <form className="form-inline mr-auto">
                     <div className="md-form my-0">
@@ -29,9 +29,68 @@ export default class extends Component {
                     </div>
                   </form>
                 </div>
-                <a className="navbar-brand" href="/dsnfbd">Thêm bệnh nhân</a>
+                <a className="navbar-brand" href="/dsfd">Thêm bệnh nhân</a>
               </nav>
-              <h1>DANH SÁCH BỆNH NHÂN</h1>
+              <h5>DANH SÁCH BỆNH NHÂN</h5>
+              {/* hiển thị danh sách bệnh nhân */}
+
+              <div className="row">
+
+
+                <div className="col-md-4 mb-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
+                  
+                </div>
+
+                <div className="col-md-4 mb-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
+                  
+                </div>
+
+                <div className="col-md-4 mb-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
+                  
+                </div>
+
+
+              </div>
+
+
+
+              <div className="row">
+
+
+                <div className="col-md-4 mb-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
+                  
+                </div>
+
+
+                <div className="col-md-4 mb-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
+                </div>
+
+
+
+                <div className="col-md-4">
+                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
+                </div>
+
+
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul className="pagination justify-content-center">
+                  <li className="page-item disabled">
+                    <a className="page-link" href="/#" tabIndex="-1">Previous</a>
+                  </li>
+                  <li className="page-item"><a className="page-link" href="/#">1</a></li>
+                  <li className="page-item"><a className="page-link" href="/#">2</a></li>
+                  <li className="page-item"><a className="page-link" href="/#">3</a></li>
+                  <li className="page-item">
+                    <a className="page-link" href="/#">Next</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>

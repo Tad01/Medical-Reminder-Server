@@ -18,7 +18,7 @@ export default class extends Component {
         <div className="container-about">
           <div className="border-title">
             <div className="section-title">
-              <div>Thông tin cá nhân</div>
+              <div>THÔNG TIN CÁ NHÂN</div>
             </div> 
           </div>
           <div className="table">
