@@ -38,19 +38,13 @@ export default class extends Component {
                 </div>
                 <div className="row">
                   <div className="col-sm">
-                    Email:
-                  </div>
-                  <div className="col-sm" />
-                </div>
-                <div className="row">
-                  <div className="col-sm">
                     Địa chỉ:
                   </div>
                   <div className="col-sm" />
                 </div>
                 <div className="row">
                   <div className="col-sm">
-                    Chuyên khoa:
+                    Chẩn đoán: 
                   </div>
                   <div className="col-sm" />
                 </div>
