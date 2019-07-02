@@ -37,6 +37,10 @@ export default class extends Component {
                             <td />
                           </tr>
                           <tr>
+                            <td>Giới tính : </td>
+                            <td />
+                          </tr>
+                          <tr>
                             <td>SĐT :</td>
                             <td />
                           </tr>
