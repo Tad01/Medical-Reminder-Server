@@ -51,23 +51,6 @@ export default class extends Component {
             </tbody>
           </table>   
 
-          {/* <table classNAme="table-sm table-2">
-            <tbody>
-              <tr>
-                <td>Giới tính:  </td>
-                <td />
-              </tr>
-              <tr>
-                <td>Ngày sinh:  </td>
-                <td />
-              </tr>
-              <tr>
-                <td>Chẩn đoán: </td>
-                <td />
-              </tr>
-            </tbody>
-          </table>     */}
-          
           <table className=" table-sm table-3">
             <tbody>
               <tr>
@@ -92,6 +75,11 @@ export default class extends Component {
               
             </tbody>
           </table>        
+        </div>
+        <div className="prebtn">
+          <button className="btn btn-info btn-block my-4 btn1" type="submit">Thêm đơn thuốc </button>
+          <button className="btn btn-info btn-block my-4 btn1" type="submit">Chỉnh sửa đơn thuốc </button>
+          <button className="btn btn-info btn-block my-4 btn1" type="submit">Xóa đơn thuốc </button>
         </div>
       </React.Fragment>
     );

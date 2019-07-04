@@ -14,13 +14,13 @@ export default class extends Component {
   render() {
     return (
       <React.Fragment>
-        
         <div className="container-about">
           <div className="border-title">
             <div className="section-title">
-              <div>THÔNG TIN CÁ NHÂN</div>
+              <h5>THÔNG TIN CÁ NHÂN</h5>
             </div> 
           </div>
+
           <div className="table">
             <div className="row">
               <div className="col-sm">
