@@ -21,9 +21,9 @@ export default class extends Component {
                 <td className="w-75">Mã đơn thuốc:  </td>
                 <td className="">Ngày:18-02-2019 </td>
               </tr>
-              
+
             </tbody>
-          </table>   
+          </table>
           <h4>ĐƠN THUỐC</h4>
           <table className="table-sm table-2">
             <tbody>
@@ -49,7 +49,7 @@ export default class extends Component {
                 <td />
               </tr>
             </tbody>
-          </table>   
+          </table>
 
           <table className=" table-sm table-3">
             <tbody>
@@ -58,7 +58,7 @@ export default class extends Component {
                 <th scope="col">Tên thuốc</th>
                 <th scope="col">Số lượng</th>
                 <th scope="col">Hình ảnh</th>
-                
+
               </tr>
               <tr>
                 <td scole="col">1</td>
@@ -72,12 +72,14 @@ export default class extends Component {
                 <td />
                 <td />
               </tr>
-              
+
             </tbody>
-          </table>        
+          </table>
         </div>
         <div className="prebtn">
-          <button className="btn btn-info btn-block my-4 btn1" type="submit">Thêm đơn thuốc </button>
+          <a href="/prescription-form">
+            <button className="btn btn-info btn-block my-4 btn1" type="submit">Thêm đơn thuốc </button>
+          </a>
           <button className="btn btn-info btn-block my-4 btn1" type="submit">Chỉnh sửa đơn thuốc </button>
           <button className="btn btn-info btn-block my-4 btn1" type="submit">Xóa đơn thuốc </button>
         </div>
