@@ -22,7 +22,7 @@ export default class extends Component {
                   <tr>
                     <th>
                       {/* <div className="mb-7"> */}
-                      <div className="blue-gradient color-block mb-3 mx-auto rounded-circle z-depth-1 patient-avarta" /> 
+                      <div className="blue-gradient color-block mb-3 mx-auto rounded-circle z-depth-1 patient-avarta" />
                       {/* </div> */}
                     </th>
                     <td>
@@ -56,7 +56,9 @@ export default class extends Component {
                       </table>
                     </td>
                     <td>
-                      <button className="btn btn-info btn-block my-4 btn1" type="submit">Thêm đơn thuốc</button>
+                      <a href="/prescription-form">
+                        <button className="btn btn-info btn-block my-4 btn1" type="submit">Thêm đơn thuốc</button>
+                      </a>
                       <button className="btn btn-info btn-block my-4 btn1" type="submit">Chỉnh sửa thông tin</button>
                       <button className="btn btn-info btn-block my-4 btn1" type="submit">Xóa bệnh nhân</button>
 
@@ -68,17 +70,17 @@ export default class extends Component {
           </div>
           <div className="box2">
             <div className="patient-pres">
-            
+
               <table className="table-sm table-pres">
                 <tbody>
                   <tr>
                     <th>tên chẩn đón</th>
                     <th>tên chẩn đón</th>
                     <th>tên chẩn đón</th>
-                                                        
+
                   </tr>
                   <tr>
-                    <th> <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres "  /></th>
+                    <th> <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres " /></th>
                     <th> <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres" /></th>
                     <th> <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres" /></th>
 
@@ -86,15 +88,15 @@ export default class extends Component {
                   <tr>
                     <th>
                       <button className="btn btn-info btn-block my-4 btn1" type="submit">Xem chi tiết</button>
-                    </th> 
+                    </th>
                     <th>
                       <button className="btn btn-info btn-block my-4 btn1" type="submit">Xem chi tiết</button>
-                    </th> 
+                    </th>
                     <th>
                       <button className="btn btn-info btn-block my-4 btn1" type="submit">Xem chi tiết</button>
-                    </th> 
+                    </th>
                   </tr>
-              
+
                 </tbody>
               </table>
               <nav aria-label="Page navigation example ">

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './manager-patients.scss';
 
+ 
 export default class extends Component {
   componentDidMount() {
     document.title = 'About';
@@ -29,7 +30,7 @@ export default class extends Component {
                     </div>
                   </form>
                 </div>
-                <a className="navbar-brand" href="/dsfd">Thêm bệnh nhân</a>
+                <a className="navbar-brand" href="/patient-form">Thêm bệnh nhân</a>
               </nav>
               <h5>DANH SÁCH BỆNH NHÂN</h5>
               {/* hiển thị danh sách bệnh nhân */}

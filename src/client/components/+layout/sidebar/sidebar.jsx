@@ -6,11 +6,6 @@ export default class Sidebar extends Component {
   constructor() {
     super();
     this.links = [
-      // /{ type: 'url', url: '/', text: 'Trang Chủ' },
-      // { type: 'url', url: '/AI-ML-Manager', text: 'Quản Lý AI/ML (Admin)' },
-      // { type: 'url', url: '/user-map', text: 'Mạng Lưới Người dùng' },
-      // { type: 'url', url: '/my-garden', text: 'Quản Lý Vườn' },
-      // { type: 'sepa rator' }
       { type: 'url', url: '/about', text: 'Thông Tin Cá Nhân' },
       { type: 'url', url: '/manager-patients', text: 'Quản lý bệnh nhân' },
       { type: 'url', url: '/', text: 'Đăng xuất' }
