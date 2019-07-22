@@ -7,22 +7,24 @@ const { User, Prescription, Medicine, MedicinePrescription } = db;
 module.exports = async () => {
   const drDat = await User.upsert({
     id: 2,
-    username: 'tandat ',
-    password: 'tandat12',
+    password: 'tandat19',
     name: 'Nguyễn Tấn Đạt',
     email: 'tandatit19@gmail.com',
-    avarta: 'https://image.flaticon.com/icons/svg/921/921130.svg',
+    avatar: 'https://image.flaticon.com/icons/svg/921/921130.svg',
+    address: 'Hồ Chí Minh',
+    specialist: 'Tim mạch',
     type: USER_TYPE.doctor
   });
 
   const patient1 = await User.upsert({
     id: 3,
-    username: 'patient_1',
+    doctor_id: 2,
     password: 'patient_1',
     name: 'patientName',
+    email: 'tandatit19@gmail.com',
     address: 'Hồ chí Minh',
     birthday: ' 1997-10-12 ',
-    avarta: 'https://image.flaticon.com/icons/svg/145/145859.svg'
+    avatar: 'https://image.flaticon.com/icons/svg/145/145859.svg'
   });
 
   const thuocParadol = await Medicine.upsert({

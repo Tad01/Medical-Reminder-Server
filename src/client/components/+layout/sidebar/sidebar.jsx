@@ -8,7 +8,8 @@ export default class Sidebar extends Component {
     this.links = [
       { type: 'url', url: '/about', text: 'Thông Tin Cá Nhân' },
       { type: 'url', url: '/manager-patients', text: 'Quản lý bệnh nhân' },
-      { type: 'url', url: '/', text: 'Đăng xuất' }
+      { type: 'url', url: '/', text: 'Đăng xuất' },
+      { type: 'url', url: '/', text: 'Đăng nhập' }
     ];
   }
 

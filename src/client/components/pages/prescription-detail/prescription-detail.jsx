@@ -58,7 +58,6 @@ export default class extends Component {
                 <th scope="col">Tên thuốc</th>
                 <th scope="col">Số lượng</th>
                 <th scope="col">Hình ảnh</th>
-
               </tr>
               <tr>
                 <td scole="col">1</td>
@@ -72,7 +71,6 @@ export default class extends Component {
                 <td />
                 <td />
               </tr>
-
             </tbody>
           </table>
         </div>

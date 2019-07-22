@@ -1,15 +1,37 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import './manager-patients.scss';
-
+import superagent from 'superagent';
  
 export default class extends Component {
-  componentDidMount() {
-    document.title = 'About';
+  constructor(props) {
+    super(props);
+    this.state = {
+      patients: []
+    };
+    this.endPoint = '/api/patients/list';
   }
 
-  componentWillUnmount() {
+  componentDidMount() {
+    document.title = 'About';
+    this.fetchPatients();
+  }
 
+  fetchPatients() {
+    const doctorId = 2;
+    superagent.get(`${this.endPoint}`)
+      .query({ doctorId })
+      .then(res => this.onPatientsResult(res));
+  }
+
+  onPatientsResult(res) {
+    if (!res.body || !res.body.patients) {
+      return;
+      // xử lý lỗi
+    }
+    this.setState({
+      patients: res.body.patients
+    });
   }
 
   render() {
@@ -36,26 +58,20 @@ export default class extends Component {
               {/* hiển thị danh sách bệnh nhân */}
 
               <div className="row">
-                <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />                 
-                </div>
-                <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />   
-                </div>
-                <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />    
-                </div>
-                <div className="col-md-4 mb-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
-                </div>
-                <div className="col-md-4">
-                  <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avarta" />
-                </div>
+                {this.state.patients.map(patient => (
+                  <div className="col-md-4 mb-4 text-center">
+                    <a href={`/patient-detail/${patient.id}`}>
+                      <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avatar">
+                        <img src={patient.avatar} alt="" />
+                      </div>
+                    </a>
+                    <div>
+                      <a href={`/patient-detail/${patient.id}`}>
+                        {patient.name}
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
               <nav aria-label="Page navigation example ">
                 <ul className="pagination justify-content-center ">

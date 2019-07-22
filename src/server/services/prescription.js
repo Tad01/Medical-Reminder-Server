@@ -1,5 +1,5 @@
 
-const { Prescription, MedicinePrescription, Medicine, User } = require('../models');
+const { Prescription, Medicine, User } = require('../models');
 const SerializerFactory = require('../serializers/serializer-factory');
 
 module.exports = class {

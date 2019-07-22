@@ -1,28 +1,55 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
+import superagent from 'superagent';
+import moment from 'moment';
 import './patient-detail.scss';
 
 export default class extends Component {
-  componentDidMount() {
-    document.title = 'Thông tin';
+  constructor(props) {
+    super(props);
+    this.state = {
+      patient: null
+    };
+    this.endPoint = '/api/patients';
   }
 
-  componentWillUnmount() {
+  componentDidMount() {
+    document.title = 'Thông tin';
+    const { patientId } = this.props.match.params;
+    this.fetchPatientData(patientId);
+  }
 
+  fetchPatientData(patientId) {
+    superagent.get(`${this.endPoint}/${patientId}`)
+      .then(res => this.onPatientResult(res));
+  }
+
+  onPatientResult(res) {
+    if (!res.body || !res.body.patient) {
+      return;
+      // xử lý lỗi
+    }
+    this.setState({
+      patient: res.body.patient
+    });
   }
 
   render() {
+    const { patient } = this.state;
     return (
       <React.Fragment>
         <div className="boxpatient">
           <div className="box1">
             <div className="patient-detail">
-              <table classNAme="table table-sm">
+              <table className="table table-sm w-100">
                 <tbody>
                   <tr>
                     <th>
                       {/* <div className="mb-7"> */}
-                      <div className="blue-gradient color-block mb-3 mx-auto rounded-circle z-depth-1 patient-avarta" />
+                      <div className="blue-gradient color-block mb-3 mx-auto rounded-circle z-depth-1 patient-avatar">
+                        <img src={patient ? patient.avatar : ''} alt="" />
+                      </div>
                       {/* </div> */}
                     </th>
                     <td>
@@ -30,27 +57,27 @@ export default class extends Component {
                         <tbody>
                           <tr>
                             <td>Họ và tên : </td>
-                            <td>Nguyễn Đình Minh Tú</td>
+                            <td>{patient ? patient.name : ''}</td>
                           </tr>
                           <tr>
                             <td>Ngày sinh : </td>
-                            <td />
+                            <td>{patient ? moment(patient.birthday).format('DD/MM/YYYY') : ''}</td>
                           </tr>
                           <tr>
                             <td>Giới tính : </td>
-                            <td />
+                            <td>{patient ? (patient.gender ? 'Nam' : 'Nữ') : ''}</td>
                           </tr>
                           <tr>
                             <td>SĐT :</td>
-                            <td />
+                            <td>{patient ? patient.phone : ''}</td>
                           </tr>
                           <tr>
                             <td>Địa chỉ :</td>
-                            <td />
+                            <td>{patient ? patient.address : ''}</td>
                           </tr>
                           <tr>
                             <td>Chẩn đoán :</td>
-                            <td />
+                            <td>{patient ? patient.description : ''}</td>
                           </tr>
                         </tbody>
                       </table>

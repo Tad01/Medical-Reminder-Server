@@ -1,8 +1,48 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import './styles.scss';
+import superagent from 'superagent';
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: 'tandatit19@gmail.com',
+      password: 'tandat19'
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.endPoint = '/api/users/login';
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    window.toggleBlocking();
+    superagent.post(this.endPoint)
+      .send({
+        email: this.state.email,
+        password: this.state.password
+      })
+      .then(res => {
+        window.toggleBlocking();
+        this.onLoginResult(res);
+      });
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  onLoginResult(res) {
+    if (res.body.ok) {
+      // chuyển hướng sang home
+      window.location.href = '/about';
+    }
+  }
+
   componentDidMount() {
     document.title = 'Home';
   }
@@ -10,15 +50,29 @@ export default class extends Component {
   componentWillUnmount() {
 
   }
-  
+ 
   render() {
     return (
-      <React.Fragment> 
+      <React.Fragment>
         <div className="d-flex justify-content-center align-items-center w-100 h-100 ">
-          <form className="text-center border border-dark p-5">
+          <form className="text-center border border-dark p-5" onSubmit={this.handleSubmit}>
             <p className="h4 mb-4">Sign in</p>
-            <input type="email" id="defaultLoginFormEmail" className="form-control mb-4" placeholder="E-mail" />
-            <input type="password" id="defaultLoginFormPassword" className="form-control mb-4" placeholder="Password" />
+            <input
+              type="email"
+              name="email"
+              className="form-control mb-4"
+              placeholder="E-mail"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+            <input
+              type="password"
+              name="password"
+              className="form-control mb-4" 
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
             <div className="d-flex justify-content-around">
               <div>
                 <div className="custom-control custom-checkbox">
