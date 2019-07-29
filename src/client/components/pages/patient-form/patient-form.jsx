@@ -24,7 +24,7 @@ export default class extends Component {
   }
 
   componentDidMount() {
-    document.title = 'Đơn thuốc';
+    document.title = 'Thêm bệnh nhân';
   }
 
   handleInputChange(event) {

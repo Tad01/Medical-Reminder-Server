@@ -22,13 +22,14 @@ router.post('/', async (req, res) => {
   if (!req.session.user) {
     return res.send({ ok: false });
   }
-  const { name, birthday, gender, patientCode, phone, address, avatar, password } = req.body;
+  const { name, birthday, gender, patientCode,specialist, phone, address, avatar, password } = req.body;
   const createdPatient = await PatientsService.createPatient({
     doctorId: req.session.user.id,
     name, 
     birthday, 
     gender, 
     patientCode,
+    specialist,
     phone, 
     address, 
     avatar, 
