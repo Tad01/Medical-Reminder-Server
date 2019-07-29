@@ -77,7 +77,7 @@ export default class extends Component {
                           </tr>
                           <tr>
                             <td>Chẩn đoán :</td>
-                            <td>{patient ? patient.description : ''}</td>
+                            <td>{patient ? patient.specialist : ''}</td>
                           </tr>
                         </tbody>
                       </table>
