@@ -11,10 +11,12 @@ export default class extends Component {
       birthday: '',
       gender: true, 
       patientCode: '',
+      specialist: '',
       phone: '', 
       address: '', 
       avatar: '', 
       password: ''
+
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -130,6 +132,20 @@ export default class extends Component {
                   name="patientCode"
                   placeholder="mã bệnh nhân..."
                   value={this.state.patientCode}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </div>
+            <div className="form-group row"> 
+              <label htmlFor="specialist" className="col-sm-2 col-form-label  col-form-label-sm">Chẩn đoán: </label>
+              <div className="col-sm-10">
+                <input
+                  type="text"
+                  className="form-control form-control-sm"
+                  id="specialist"
+                  name="specialist"
+                  placeholder="VD: Tim mạch,..."
+                  value={this.state.specialist}
                   onChange={this.handleInputChange}
                 />
               </div>
