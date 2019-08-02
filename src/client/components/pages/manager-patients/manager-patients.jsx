@@ -18,9 +18,7 @@ export default class extends Component {
   }
 
   fetchPatients() {
-    const doctorId = 2;
     superagent.get(`${this.endPoint}`)
-      .query({ doctorId })
       .then(res => this.onPatientsResult(res));
   }
 
@@ -39,39 +37,43 @@ export default class extends Component {
       <React.Fragment>
         <div className="container-managerpatients">
           <div className="box">
-            <div className="manager-patients">
+            <div className="manager-patients d-flex flex-column">
               {/* <div className="control">
                 <button type="button" className="btn btn-light">Thêm bệnh nhân</button> <br />
               </div> */}
-              <nav className="navbar navbar-expand-lg navbar-dark  lighten-3 mb-4">
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                  <form className="form-inline mr-auto">
-                    <div className="md-form my-0">
-                      <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
-                      <i className="fas fa-search text-white ml-3" aria-hidden="true" />
-                    </div>
-                  </form>
-                </div>
-                <a className="navbar-brand" href="/patient-form">Thêm bệnh nhân</a>
-              </nav>
-              <h5>DANH SÁCH BỆNH NHÂN</h5>
-              {/* hiển thị danh sách bệnh nhân */}
-
-              <div className="row">
-                {this.state.patients.map(patient => (
-                  <div className="col-md-4 mb-4 text-center">
-                    <a href={`/patient-detail/${patient.id}`}>
-                      <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avatar">
-                        <img src={patient.avatar} alt="" />
+              <div>
+                <nav className="navbar navbar-expand-lg navbar-dark  lighten-3 mb-4">
+                  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form className="form-inline mr-auto">
+                      <div className="md-form my-0">
+                        <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
+                        <i className="fas fa-search text-white ml-3" aria-hidden="true" />
                       </div>
-                    </a>
-                    <div>
-                      <a href={`/patient-detail/${patient.id}`}>
-                        {patient.name}
-                      </a>
-                    </div>
+                    </form>
                   </div>
-                ))}
+                  <a className="navbar-brand" href="/patient-form">Thêm bệnh nhân</a>
+                </nav>
+                <div>
+                  <h5>DANH SÁCH BỆNH NHÂN</h5>
+                </div>
+              </div>
+              <div className="d-flex flex-fill overflow-hidden">
+                <div className="flex-fill overflow-auto d-flex flex-wrap ">
+                  {this.state.patients.map(patient => (
+                    <div className="col-md-4 mb-4 text-center">
+                      <a href={`/patient-detail/${patient.id}`}>
+                        <div className="cloudy-knoxville-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avatar">
+                          <img src={patient.avatar} alt="" />
+                        </div>
+                      </a>
+                      <div>
+                        <a href={`/patient-detail/${patient.id}`}>
+                          {patient.name}
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
               <nav aria-label="Page navigation example ">
                 <ul className="pagination justify-content-center ">

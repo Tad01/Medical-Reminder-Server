@@ -42,14 +42,14 @@ class App extends Component {
             || window.location.pathname.startsWith('/patient-detail')
             || window.location.pathname === '/prescription-detail'
             || window.location.pathname === '/patient-form'
-            || window.location.pathname === '/prescription-form'  ? null : <SideBar />}
+            || window.location.pathname.startsWith('/prescription-form')  ? null : <SideBar />}
           <div id="content">
             <Route path="/" exact component={Home} /> 
             <Route path="/about" exact component={About} />
             <Route path="/manager-patients" exact component={ManagerPatients} />
             <Route path="/patient-detail/:patientId" exact component={PatientDetail} />
             <Route path="/prescription-detail" exact component={PrescriptionDetail} />
-            <Route path="/prescription-form" exact component={PrescriptionForm} />
+            <Route path="/prescription-form/:patientId" exact component={PrescriptionForm} />
             <Route path="/patient-form" exact component={Patientform} />
 
           </div>

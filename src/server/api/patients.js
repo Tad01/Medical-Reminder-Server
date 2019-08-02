@@ -3,6 +3,12 @@ const router = require('express').Router();
 const PatientsService = require('../services/patients');
 
 
+router.get('/:patientId(\\d+)', async (req, res) => {
+  const { patientId } = req.params;
+  const patient = await PatientsService.getPatient(patientId);
+  return res.send({ patient });
+});
+
 router.get('/list', async (req, res) => {
   if (!req.session.user) {
     return res.send({ ok: false });
@@ -12,24 +18,18 @@ router.get('/list', async (req, res) => {
   return res.send({ patients: doctors[0].patient });
 });
 
-router.get('/:patientId', async (req, res) => {
-  const { patientId } = req.params;
-  const patient = await PatientsService.getPatient(patientId);
-  return res.send({ patient });
-});
-
 router.post('/', async (req, res) => {
   if (!req.session.user) {
     return res.send({ ok: false });
   }
-  const { name, birthday, gender, patientCode,specialist, phone, address, avatar, password } = req.body;
+  const { name, birthday, gender, patientCode,diagnose, phone, address, avatar, password } = req.body;
   const createdPatient = await PatientsService.createPatient({
     doctorId: req.session.user.id,
     name, 
     birthday, 
     gender, 
     patientCode,
-    specialist,
+    diagnose,
     phone, 
     address, 
     avatar, 

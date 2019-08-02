@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    diagnose: DataTypes.TEXT
+    diagnose: DataTypes.TEXT,
+    description: DataTypes.STRING
   }, {
     underscored: true
   });

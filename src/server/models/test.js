@@ -10,6 +10,8 @@ module.exports = async () => {
     password: 'tandat19',
     name: 'Nguyễn Tấn Đạt',
     email: 'tandatit19@gmail.com',
+    birthday: '1982-12-12',
+    phone: '0989898989',
     avatar: 'https://image.flaticon.com/icons/svg/921/921130.svg',
     address: 'Hồ Chí Minh',
     specialist: 'Tim mạch',
@@ -21,6 +23,7 @@ module.exports = async () => {
     doctor_id: 2,
     password: 'patient_1',
     name: 'patientName',
+    diagnose: 'Tim mạch',
     email: 'tandatit19@gmail.com',
     address: 'Hồ chí Minh',
     birthday: ' 1997-10-12 ',
@@ -31,14 +34,14 @@ module.exports = async () => {
     id: 1,
     name: 'Paradol',
     image: 'https://www.mims.com/resources/drugs/Indonesia/packshot/Panadol%20Extra6002PPS0.JPG',
-    code: 'PARA-12-443'
+    code: 'T1'
   });
 
   const thuocVitaminC = await Medicine.upsert({
     id: 2,
     name: 'Vitamin C',
     image: 'https://www.justvitamins.co.uk/product-images/Fullsize/eb891065-ecaa-4045-9a42-59822d46e91f-1.jpg',
-    code: 'VITAC-12-443'
+    code: 'T2'
   });
 
   const donThuoc1 = await Prescription.upsert({

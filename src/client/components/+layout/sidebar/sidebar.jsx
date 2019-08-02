@@ -11,6 +11,13 @@ export default class Sidebar extends Component {
       { type: 'url', url: '/', text: 'Đăng xuất' },
       { type: 'url', url: '/', text: 'Đăng nhập' }
     ];
+    this.state = {
+      avatar: ''
+    };
+
+    window.setDoctorAvatar = (avatar) => this.setState({
+      avatar
+    });
   }
 
   render() {
@@ -20,9 +27,8 @@ export default class Sidebar extends Component {
         <aside className="d-flex flex-column modern-scrollbar">
           <div className="row ">
             <div className="col-md-4">
-              <div className="aqua-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half  avarta">
-                
-                {/* <img src="https://image.flaticon.com/icons/svg/921/921130.svg" alt="" className="img" /> */}
+              <div className="aqua-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avatar">
+                <img src={this.state.avatar} alt="" className="img" />
               </div>
               <h6>Doctor</h6>
             </div>
@@ -30,7 +36,15 @@ export default class Sidebar extends Component {
           {
             this.links.map(link => {
               if (link.type === 'url')
-                return <NavLink to={link.url} key={link.url} exact activeClassName='active'>{link.text}</NavLink>;
+                return (
+                  <NavLink
+                    to={link.url}
+                    key={link.text}
+                    exact
+                    activeClassName='active'
+                  >{link.text}
+                  </NavLink>
+                );
               if (link.type === 'separator')
                 return <hr key="Z" />;
               return null;

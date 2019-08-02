@@ -25,8 +25,9 @@ const serverConfig = require('../config/server');
 // Init the Server
 const app = express();
 
-// Setup Easy Zip
-app.use(expressEasyZip());
+// Static
+const PUBLIC_FOLDER = path.resolve(process.cwd(), serverConfig.publicFolder);
+app.get('*.*', express.static(PUBLIC_FOLDER));
 
 // Setup Database
 const sequelizeDB = require('./models');
@@ -70,9 +71,8 @@ app.use(bodyParser.json({ limit: '10mb' }));
 // Setup for File upload
 app.use(fileUpload());
 
-// Routing
-const PUBLIC_FOLDER = path.resolve(process.cwd(), serverConfig.publicFolder);
-app.get('*.*', express.static(PUBLIC_FOLDER));
+// Setup Easy Zip
+app.use(expressEasyZip());
 
 app.use('/api', api);
 app.use('/', routes);

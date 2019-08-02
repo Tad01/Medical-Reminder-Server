@@ -16,7 +16,6 @@ export default class extends Component {
       address: '', 
       avatar: '', 
       password: ''
-
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

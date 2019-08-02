@@ -41,6 +41,9 @@ export default class extends Component {
       // chuyển hướng sang home
       window.location.href = '/about';
     }
+    else{
+      window.alert('Sai email hoặc mật khẩu') ;
+    }
   }
 
   componentDidMount() {

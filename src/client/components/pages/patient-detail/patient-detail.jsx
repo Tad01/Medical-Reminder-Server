@@ -77,16 +77,18 @@ export default class extends Component {
                           </tr>
                           <tr>
                             <td>Chẩn đoán :</td>
-                            <td>{patient ? patient.specialist : ''}</td>
+                            <td>{patient ? patient.diagnose : ''}</td>
                           </tr>
                         </tbody>
                       </table>
                     </td>
                     <td>
-                      <a href="/prescription-form">
+                      <a href={`/prescription-form/${patient ? patient.id : ''}`}>
                         <button className="btn btn-info btn-block my-4 btn1" type="submit">Thêm đơn thuốc</button>
                       </a>
-                      <button className="btn btn-info btn-block my-4 btn1" type="submit">Chỉnh sửa thông tin</button>
+                      <a href="/patient-form">
+                        <button className="btn btn-info btn-block my-4 btn1" type="submit">Chỉnh sửa thông tin </button>
+                      </a>
                       <button className="btn btn-info btn-block my-4 btn1" type="submit">Xóa bệnh nhân</button>
 
                     </td>
@@ -101,7 +103,7 @@ export default class extends Component {
               <table className="table-sm table-pres">
                 <tbody>
                   <tr>
-                    <th>tên chẩn đón</th>
+                    <th>{patient ? patient.diagnose : ''}</th>
                     <th>tên chẩn đón</th>
                     <th>tên chẩn đón</th>
 

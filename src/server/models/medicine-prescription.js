@@ -6,8 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     amount: DataTypes.DECIMAL,
-    time: DataTypes.ARRAY(DataTypes.JSONB),
-    description: DataTypes.STRING
+    time: DataTypes.ARRAY(DataTypes.JSON)
     /**
      * [
      *  {
