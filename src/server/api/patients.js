@@ -2,7 +2,6 @@
 const router = require('express').Router();
 const PatientsService = require('../services/patients');
 
-
 router.get('/:patientId(\\d+)', async (req, res) => {
   const { patientId } = req.params;
   const patient = await PatientsService.getPatient(patientId);

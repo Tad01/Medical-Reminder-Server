@@ -41,16 +41,14 @@ export default class extends Component {
       <React.Fragment>
         <div className="boxpatient">
           <div className="box1">
-            <div className="patient-detail">
+            <div className="patient-detail d-flex flex-column">
               <table className="table table-sm w-100">
                 <tbody>
                   <tr>
-                    <th>
-                      {/* <div className="mb-7"> */}
+                    <th>                    
                       <div className="blue-gradient color-block mb-3 mx-auto rounded-circle z-depth-1 patient-avatar">
                         <img src={patient ? patient.avatar : ''} alt="" />
                       </div>
-                      {/* </div> */}
                     </th>
                     <td>
                       <table className="table table-sm table1">
@@ -74,11 +72,7 @@ export default class extends Component {
                           <tr>
                             <td>Địa chỉ :</td>
                             <td>{patient ? patient.address : ''}</td>
-                          </tr>
-                          <tr>
-                            <td>Chẩn đoán :</td>
-                            <td>{patient ? patient.diagnose : ''}</td>
-                          </tr>
+                          </tr>     
                         </tbody>
                       </table>
                     </td>
@@ -90,45 +84,34 @@ export default class extends Component {
                         <button className="btn btn-info btn-block my-4 btn1" type="submit">Chỉnh sửa thông tin </button>
                       </a>
                       <button className="btn btn-info btn-block my-4 btn1" type="submit">Xóa bệnh nhân</button>
-
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </div>
-          <div className="box2">
-            <div className="patient-pres">
-
-              <table className="table-sm table-pres">
-                <tbody>
-                  <tr>
-                    <th>{patient ? patient.diagnose : ''}</th>
-                    <th>tên chẩn đón</th>
-                    <th>tên chẩn đón</th>
-
-                  </tr>
-                  <tr>
-                    <th> <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres " /></th>
-                    <th> <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres" /></th>
-                    <th> <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres" /></th>
-
-                  </tr>
-                  <tr>
-                    <th>
-                      <button className="btn btn-info btn-block my-4 btn1" type="submit">Xem chi tiết</button>
-                    </th>
-                    <th>
-                      <button className="btn btn-info btn-block my-4 btn1" type="submit">Xem chi tiết</button>
-                    </th>
-                    <th>
-                      <button className="btn btn-info btn-block my-4 btn1" type="submit">Xem chi tiết</button>
-                    </th>
-                  </tr>
-
-                </tbody>
-              </table>
-              <nav aria-label="Page navigation example ">
+            <div>
+              <h4>DANH SÁCH ĐƠN THUỐC</h4>
+            </div>
+            <div className="d-flex flex-fill overflow-hidden">
+              <div className="flex-fill overflow-auto d-flex flex-wrap">
+                {patient ? patient.prescriptions.map(pre => (
+                  <div className="col-md-4 mb-4 text-center">
+                    <div>{pre.diagnose}</div>
+                    <div>
+                      <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres " />
+                    </div>
+                    <div>
+                      <a
+                        className="btn btn-info btn-block my-4 btn1 w-75 text-center"
+                        href={`/prescription-detail/${pre.id}`}
+                      >
+                        Xem chi tiết
+                      </a>
+                    </div>
+                  </div>
+                )) : null}
+              </div>
+              {/* <nav aria-label="Page navigation example ">
                 <ul className="pagination justify-content-center ">
                   <li className="page-item disabled page">
                     <a className="page-link" href="/#" tabIndex="-1">Previous</a>
@@ -140,9 +123,11 @@ export default class extends Component {
                     <a className="page-link" href="/#">Next</a>
                   </li>
                 </ul>
-              </nav>
+              </nav> */}
             </div>
           </div>
+          
+          
         </div>
       </React.Fragment>
     );

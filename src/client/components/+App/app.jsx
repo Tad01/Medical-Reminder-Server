@@ -40,7 +40,7 @@ class App extends Component {
         <div id="body" className="d-flex" blocking={`${this.state.blocking}`}>
           {window.location.pathname === '/'
             || window.location.pathname.startsWith('/patient-detail')
-            || window.location.pathname === '/prescription-detail'
+            || window.location.pathname.startsWith('/prescription-detail')
             || window.location.pathname === '/patient-form'
             || window.location.pathname.startsWith('/prescription-form')  ? null : <SideBar />}
           <div id="content">
@@ -48,7 +48,7 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/manager-patients" exact component={ManagerPatients} />
             <Route path="/patient-detail/:patientId" exact component={PatientDetail} />
-            <Route path="/prescription-detail" exact component={PrescriptionDetail} />
+            <Route path="/prescription-detail/:prescriptionId" exact component={PrescriptionDetail} />
             <Route path="/prescription-form/:patientId" exact component={PrescriptionForm} />
             <Route path="/patient-form" exact component={Patientform} />
 

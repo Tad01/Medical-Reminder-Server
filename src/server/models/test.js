@@ -4,11 +4,12 @@ const { USER_TYPE } = require('../../shared/constants');
 
 const { User, Prescription, Medicine, MedicinePrescription } = db;
 
+
 module.exports = async () => {
   const drDat = await User.upsert({
     id: 2,
     password: 'tandat19',
-    name: 'Nguyễn Tấn Đạt',
+    name: 'Nguyễn Văn Nam',
     email: 'tandatit19@gmail.com',
     birthday: '1982-12-12',
     phone: '0989898989',
@@ -21,15 +22,81 @@ module.exports = async () => {
   const patient1 = await User.upsert({
     id: 3,
     doctor_id: 2,
-    password: 'patient_1',
-    name: 'patientName',
+    patient_code: 'benhnhan01',
+    password: '123456',
+    name: 'Nguyễn Trần Nam',
     diagnose: 'Tim mạch',
     email: 'tandatit19@gmail.com',
     address: 'Hồ chí Minh',
-    birthday: ' 1997-10-12 ',
-    avatar: 'https://image.flaticon.com/icons/svg/145/145859.svg'
+    birthday: ' 1953-10-12 ',
+    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
   });
-
+  const patient2 = await User.upsert({
+    id: 7,
+    doctor_id: 2,
+    password: '123456',
+    name: 'Nguyễn Trần Nam',
+    diagnose: 'Tim mạch',
+    email: 'tandatit19@gmail.com',
+    address: 'Hồ chí Minh',
+    birthday: ' 1953-10-12 ',
+    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
+  });
+  const patient3 = await User.upsert({
+    id: 8,
+    doctor_id: 2,
+    password: '123456',
+    name: 'Nguyễn Trần Nam',
+    diagnose: 'Tim mạch',
+    email: 'tandatit19@gmail.com',
+    address: 'Hồ chí Minh',
+    birthday: ' 1953-10-12 ',
+    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
+  });
+  const patient4 = await User.upsert({
+    id: 9,
+    doctor_id: 2,
+    password: '123456',
+    name: 'Nguyễn Trần Nam',
+    diagnose: 'Tim mạch',
+    email: 'tandatit19@gmail.com',
+    address: 'Hồ chí Minh',
+    birthday: ' 1953-10-12 ',
+    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
+  });
+  const patient5 = await User.upsert({
+    id: 10,
+    doctor_id: 2,
+    password: '123456',
+    name: 'Nguyễn Trần Nam',
+    diagnose: 'Tim mạch',
+    email: 'tandatit19@gmail.com',
+    address: 'Hồ chí Minh',
+    birthday: ' 1953-10-12 ',
+    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
+  });
+  const patient6 = await User.upsert({
+    id: 11,
+    doctor_id: 2,
+    password: '123456',
+    name: 'Nguyễn Trần Nam',
+    diagnose: 'Tim mạch',
+    email: 'tandatit19@gmail.com',
+    address: 'Hồ chí Minh',
+    birthday: ' 1953-10-12 ',
+    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
+  });
+  const patient7 = await User.upsert({
+    id: 12,
+    doctor_id: 2,
+    password: '123456',
+    name: 'Nguyễn Trần Nam',
+    diagnose: 'Tim mạch',
+    email: 'tandatit19@gmail.com',
+    address: 'Hồ chí Minh',
+    birthday: ' 1953-10-12 ',
+    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
+  });
   const thuocParadol = await Medicine.upsert({
     id: 1,
     name: 'Paradol',
@@ -53,44 +120,17 @@ module.exports = async () => {
 
   const chiTietThuocHeart1 = await MedicinePrescription.upsert({
     id: 1,
-    medicine_id: 1,
-    prescription_id: 1,
+    medicine_id: thuocParadol.id,
+    prescription_id: donThuoc1.id,
     amount: 15,
-    time: [
-      {
-        'amount': 1,
-        'time': '7:00',
-        'description': 'Uống ít thôi'
-      },
-      {
-        'amount': 1,
-        'time': '18:00',
-        'description': 'Ngủ trước khi uống'
-      }
-    ]
+    time: [2, 4, 1]
   });
   const chiTietThuocHeart2 = await MedicinePrescription.upsert({
     id: 2,
-    medicine_id: 2,
-    prescription_id: 1,
+    medicine_id: thuocVitaminC.id,
+    prescription_id: donThuoc1.id,
     amount: 15,
-    time: [
-      {
-        'amount': 1,
-        'time': '7:00',
-        'description': 'Uống ít thôi'
-      },
-      {
-        'amount': 1,
-        'time': '11:00',
-        'description': 'Uống trước khi ăn'
-      },
-      {
-        'amount': 1,
-        'time': '18:00',
-        'description': 'Ngủ trước khi uống'
-      }
-    ]
+    time: [1, 2, 1]
   });
 
   return {

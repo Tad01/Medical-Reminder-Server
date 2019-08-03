@@ -11,7 +11,6 @@ export default class extends Component {
       birthday: '',
       gender: true, 
       patientCode: '',
-      specialist: '',
       phone: '', 
       address: '', 
       avatar: '', 
@@ -48,7 +47,7 @@ export default class extends Component {
   // eslint-disable-next-line class-methods-use-this
   onCreateResult(res) {
     if (res.body.ok) {
-      // chuyển hướng sang home
+      // chuyển hướng sang quản lí bệnh nhân
       window.location.href = '/manager-patients';
     }
   }
@@ -135,7 +134,7 @@ export default class extends Component {
                 />
               </div>
             </div>
-            <div className="form-group row"> 
+            {/* <div className="form-group row"> 
               <label htmlFor="specialist" className="col-sm-2 col-form-label  col-form-label-sm">Chẩn đoán: </label>
               <div className="col-sm-10">
                 <input
@@ -148,7 +147,7 @@ export default class extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-            </div>
+            </div> */}
             <div className="form-group row"> 
               <label htmlFor="phone" className="col-sm-2 col-form-label  col-form-label-sm">Điện thoại: </label>
               <div className="col-sm-10">

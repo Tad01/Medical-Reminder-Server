@@ -24,14 +24,12 @@ export default class Sidebar extends Component {
     return (
       <React.Fragment>
 
-        <aside className="d-flex flex-column modern-scrollbar">
-          <div className="row ">
-            <div className="col-md-4">
-              <div className="aqua-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avatar">
-                <img src={this.state.avatar} alt="" className="img" />
-              </div>
-              <h6>Doctor</h6>
+        <aside className="d-flex flex-column modern-scrollbar text-center">
+          <div className="row text-center">
+            <div className="aqua-gradient color-block mb-3 mx-auto rounded-circle z-depth-1-half avatar text-center">
+              <img src={this.state.avatar} alt="" className="img" /> <br />
             </div>
+
           </div>
           {
             this.links.map(link => {

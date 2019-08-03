@@ -1,5 +1,5 @@
 
-const { User } = require('../models');
+const { User, Prescription, Medicine } = require('../models');
 const { USER_TYPE } = require('../../shared/constants');
 
 module.exports = class {
@@ -7,7 +7,15 @@ module.exports = class {
     return User.findOne({
       where: {
         id: patientId
-      }
+      },
+      include: [
+        {
+          model: Prescription,
+          include: [
+            { model: Medicine }
+          ]
+        }
+      ]
     })
       .then(patient => JSON.parse(JSON.stringify(patient)));
   }

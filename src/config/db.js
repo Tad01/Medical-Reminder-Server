@@ -11,7 +11,7 @@ const common = {
   dbPostgresSSLPort: 5572,
   dbPostgresDialect: 'postgres',
   dbPostgresURI: 'postgres://dqvbrxrokancky:f98c260c9c57539aae4fc6013ec2eaf3a4afdbaeb730b24940e2ddd928291593@ec2-50-19-114-27.compute-1.amazonaws.com:5432/dfr8v2qroholub',
-
+  
   dbPostgresOptions: {
     define: {
       underscored: true

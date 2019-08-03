@@ -48,15 +48,15 @@ export default class extends Component {
         
           <div className="table">
             <div className="row">
-              <div className="col-sm">
+              <div className="col-sm text-center">
                 Họ và tên: 
               </div>
-              <div className="col-sm">
+              <div className="col-sm ">
                 {doctor ? doctor.name : ''}
               </div>
             </div>
-            <div className="row">
-              <div className="col-sm">
+            <div className="row ">
+              <div className="col-sm text-center">
                 Ngày sinh:
               </div>
               <div className="col-sm">
@@ -64,7 +64,7 @@ export default class extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-sm">
+              <div className="col-sm text-center">
                 Điện thoại:  
               </div>
               <div className="col-sm">
@@ -72,7 +72,7 @@ export default class extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-sm">
+              <div className="col-sm text-center">
                 Email: 
               </div>
               <div className="col-sm">
@@ -80,7 +80,7 @@ export default class extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-sm">
+              <div className="col-sm text-center">
                 Địa chỉ: 
               </div>
               <div className="col-sm">
@@ -88,7 +88,7 @@ export default class extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-sm">
+              <div className="col-sm text-center">
                Chuyên khoa: 
               </div>
               <div className="col-sm">

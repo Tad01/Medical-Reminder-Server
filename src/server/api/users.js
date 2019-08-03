@@ -14,6 +14,18 @@ router.post('/login', async (req, res) => {
   return res.send({ ok: user != null });
 });
 
+router.post('/login-patient', async (req, res) => {
+  const { patientCode, password } = req.body; // destructing - { a,b,c } = object
+  const user = await UserService.loginPatient(patientCode, password);
+  if (!user) {
+    return res.send({ ok: false });
+  }
+  req.session.user = user;
+  return req.session.save(() => {
+    res.send({ user });
+  });
+});
+
 router.get('/logout', async (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');

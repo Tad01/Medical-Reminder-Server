@@ -3,6 +3,18 @@ const { Prescription, Medicine, User, MedicinePrescription } = require('../model
 const SerializerFactory = require('../serializers/serializer-factory');
 
 module.exports = class {
+  static async get(id) {
+    return Prescription.findOne({
+      where: {
+        id
+      },
+      include: [
+        { model: Medicine }
+      ]
+    })
+      .then(prescription => SerializerFactory.get('prescription').serialze(prescription));
+  }
+
   static async getAll() {
     return Prescription.findAll({
       include: [
@@ -11,7 +23,7 @@ module.exports = class {
         { model: User, as: 'patient' }
       ]
     })
-      .then(prescriptions => SerializerFactory.get('prescriptions').serialze(prescriptions));
+      .then(prescriptions => SerializerFactory.get('prescription').serialzeCollection(prescriptions));
   }
 
   static async createPrescription({

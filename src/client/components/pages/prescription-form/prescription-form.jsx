@@ -7,7 +7,6 @@ import './prescription-form.scss';
 export default class extends Component {
   constructor(props) {
     super(props);
-    
     this.patientId = props.match.params.patientId;
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

@@ -10,4 +10,13 @@ module.exports = class {
       }
     });
   }
+
+  static async loginPatient(patientCode, password) {
+    return User.findOne({
+      where: {
+        patient_code: patientCode,
+        password
+      }
+    });
+  }
 };
