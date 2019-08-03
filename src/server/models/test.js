@@ -31,72 +31,7 @@ module.exports = async () => {
     birthday: ' 1953-10-12 ',
     avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
   });
-  const patient2 = await User.upsert({
-    id: 7,
-    doctor_id: 2,
-    password: '123456',
-    name: 'Nguyễn Trần Nam',
-    diagnose: 'Tim mạch',
-    email: 'tandatit19@gmail.com',
-    address: 'Hồ chí Minh',
-    birthday: ' 1953-10-12 ',
-    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
-  });
-  const patient3 = await User.upsert({
-    id: 8,
-    doctor_id: 2,
-    password: '123456',
-    name: 'Nguyễn Trần Nam',
-    diagnose: 'Tim mạch',
-    email: 'tandatit19@gmail.com',
-    address: 'Hồ chí Minh',
-    birthday: ' 1953-10-12 ',
-    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
-  });
-  const patient4 = await User.upsert({
-    id: 9,
-    doctor_id: 2,
-    password: '123456',
-    name: 'Nguyễn Trần Nam',
-    diagnose: 'Tim mạch',
-    email: 'tandatit19@gmail.com',
-    address: 'Hồ chí Minh',
-    birthday: ' 1953-10-12 ',
-    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
-  });
-  const patient5 = await User.upsert({
-    id: 10,
-    doctor_id: 2,
-    password: '123456',
-    name: 'Nguyễn Trần Nam',
-    diagnose: 'Tim mạch',
-    email: 'tandatit19@gmail.com',
-    address: 'Hồ chí Minh',
-    birthday: ' 1953-10-12 ',
-    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
-  });
-  const patient6 = await User.upsert({
-    id: 11,
-    doctor_id: 2,
-    password: '123456',
-    name: 'Nguyễn Trần Nam',
-    diagnose: 'Tim mạch',
-    email: 'tandatit19@gmail.com',
-    address: 'Hồ chí Minh',
-    birthday: ' 1953-10-12 ',
-    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
-  });
-  const patient7 = await User.upsert({
-    id: 12,
-    doctor_id: 2,
-    password: '123456',
-    name: 'Nguyễn Trần Nam',
-    diagnose: 'Tim mạch',
-    email: 'tandatit19@gmail.com',
-    address: 'Hồ chí Minh',
-    birthday: ' 1953-10-12 ',
-    avatar: 'http://media.vietq.vn/files/Joelewis.jpg'
-  });
+
   const thuocParadol = await Medicine.upsert({
     id: 1,
     name: 'Paradol',
