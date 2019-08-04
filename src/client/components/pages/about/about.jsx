@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import superagent from 'superagent';
 import './about.scss';
+import moment from 'moment';
 
 export default class extends Component {
   constructor(props) {
