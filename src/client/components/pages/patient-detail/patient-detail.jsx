@@ -45,7 +45,7 @@ export default class extends Component {
               <table className="table table-sm w-100">
                 <tbody>
                   <tr>
-                    <th>                    
+                    <th>
                       <div className="blue-gradient color-block mb-3 mx-auto rounded-circle z-depth-1 patient-avatar">
                         <img src={patient ? patient.avatar : ''} alt="" />
                       </div>
@@ -72,7 +72,11 @@ export default class extends Component {
                           <tr>
                             <td>Địa chỉ :</td>
                             <td>{patient ? patient.address : ''}</td>
-                          </tr>     
+                          </tr>
+                          <tr>
+                            <td>Mã bệnh nhân :</td>
+                            <td>{patient ? patient.patient_code : ''}</td>
+                          </tr>
                         </tbody>
                       </table>
                     </td>
@@ -126,8 +130,8 @@ export default class extends Component {
               </nav> */}
             </div>
           </div>
-          
-          
+
+
         </div>
       </React.Fragment>
     );
