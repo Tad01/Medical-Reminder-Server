@@ -97,7 +97,7 @@ module.exports = async () => {
     id: 10,
     name: 'Dexamethason',
     image: 'https://viemphequan.net/wp-https://img.thuocbietduoc.com.vn/images/drugs/VIDIPHA/DEXAMETHASON.jpg/uploads/2019/04/thuoc-Prednislone.jpg',
-    code: '10'
+    code: 'T10'
   });
 
   const donThuoc1 = await Prescription.upsert({

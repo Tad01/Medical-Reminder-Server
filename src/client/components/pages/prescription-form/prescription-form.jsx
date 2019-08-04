@@ -121,18 +121,15 @@ export default class extends Component {
                   {this.state.medicines.map((med, index) => (
                     <div className="row mx-0" key={med.id}>
                       <div className="col px-0 mr-1">
-                        <select>
-                          <option
-                            type="text"
-                            className="form-control form-control-sm"
-                            placeholder="Mã thuốc"
-                            name="medicine.code"
-                            data-index={index}
-                            value={med.code}
-                            onChange={this.handleInputChange}
-                          >
-                          </option>
-                        </select>
+                        <input
+                          type="text"
+                          className="form-control form-control-sm"
+                          placeholder="Mã thuốc"
+                          name="medicine.code"
+                          data-index={index}
+                          value={med.code}
+                          onChange={this.handleInputChange}
+                        />
                       </div>
                       <div className="col px-0 mr-1">
                         <input
