@@ -7,6 +7,7 @@ const { User, Prescription, Medicine, MedicinePrescription } = db;
 
 
 module.exports = async () => {
+
   const drDat = await User.upsert({
     id: 2,
     password: 'tandat19',
@@ -23,7 +24,7 @@ module.exports = async () => {
   const patient1 = await User.upsert({
     id: 3,
     doctor_id: 2,
-    patient_code: 'NTN',
+    patient_code: 'NTN1953',
     password: '123456',
     name: 'Nguyễn Trần Nam',
     phone: '0987321321',
@@ -98,7 +99,7 @@ module.exports = async () => {
   const thuocDexamethason = await Medicine.upsert({
     id: 10,
     name: 'Dexamethason',
-    image: 'https://viemphequan.net/wp-https://img.thuocbietduoc.com.vn/images/drugs/VIDIPHA/DEXAMETHASON.jpg/uploads/2019/04/thuoc-Prednislone.jpg',
+    image: 'https://img.thuocbietduoc.com.vn/images/drugs/VIDIPHA/DEXAMETHASON.jpg',
     code: 'T10'
   });
 

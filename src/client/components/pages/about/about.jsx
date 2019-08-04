@@ -43,13 +43,13 @@ export default class extends Component {
           <div className="border-title">
             <div className="section-title">
               <h5>THÔNG TIN CÁ NHÂN</h5>
-            </div> 
+            </div>
           </div>
-        
+
           <div className="table">
             <div className="row">
               <div className="col-sm text-center">
-                Họ và tên: 
+                Họ và tên:
               </div>
               <div className="col-sm ">
                 {doctor ? doctor.name : ''}
@@ -60,12 +60,12 @@ export default class extends Component {
                 Ngày sinh:
               </div>
               <div className="col-sm">
-                {doctor ? doctor.birthday : ''}
+                {doctor ? moment(doctor.birthday).format('DD/MM/YYYY') : ''}
               </div>
             </div>
             <div className="row">
               <div className="col-sm text-center">
-                Điện thoại:  
+                Điện thoại:
               </div>
               <div className="col-sm">
                 {doctor ? doctor.phone : ''}
@@ -73,7 +73,7 @@ export default class extends Component {
             </div>
             <div className="row">
               <div className="col-sm text-center">
-                Email: 
+                Email:
               </div>
               <div className="col-sm">
                 {doctor ? doctor.email : ''}
@@ -81,7 +81,7 @@ export default class extends Component {
             </div>
             <div className="row">
               <div className="col-sm text-center">
-                Địa chỉ: 
+                Địa chỉ:
               </div>
               <div className="col-sm">
                 {doctor ? doctor.address : ''}
@@ -89,7 +89,7 @@ export default class extends Component {
             </div>
             <div className="row">
               <div className="col-sm text-center">
-               Chuyên khoa: 
+                Chuyên khoa:
               </div>
               <div className="col-sm">
                 {doctor ? doctor.specialist : ''}
