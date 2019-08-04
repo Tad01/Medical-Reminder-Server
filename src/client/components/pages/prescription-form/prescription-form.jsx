@@ -35,7 +35,7 @@ export default class extends Component {
     if (name.startsWith('medicine')) {
       const subProp = name.split('.')[1];
       this.setState(state => ({
-        medicines: update(state.medicines, { [index]: { [subProp]: { $set: value }}})
+        medicines: update(state.medicines, { [index]: { [subProp]: { $set: value } } })
       }));
       return;
     }
@@ -78,7 +78,7 @@ export default class extends Component {
   }
 
   removeMedicine(event) {
-    const {index} = event.target.dataset;
+    const { index } = event.target.dataset;
     if (index >= 0) {
       this.state.medicines.splice(index, 1);
       this.setState(state => ({
@@ -121,15 +121,18 @@ export default class extends Component {
                   {this.state.medicines.map((med, index) => (
                     <div className="row mx-0" key={med.id}>
                       <div className="col px-0 mr-1">
-                        <input
-                          type="text"
-                          className="form-control form-control-sm"
-                          placeholder="Mã thuốc"
-                          name="medicine.code"
-                          data-index={index}
-                          value={med.code}
-                          onChange={this.handleInputChange}
-                        />
+                        <select>
+                          <option
+                            type="text"
+                            className="form-control form-control-sm"
+                            placeholder="Mã thuốc"
+                            name="medicine.code"
+                            data-index={index}
+                            value={med.code}
+                            onChange={this.handleInputChange}
+                          >
+                          </option>
+                        </select>
                       </div>
                       <div className="col px-0 mr-1">
                         <input
@@ -223,7 +226,7 @@ export default class extends Component {
           </table>
           <button className="btn btn-primary btnpres" type="submit">Thêm đơn thuốc</button>
         </form>
-          
+
       </React.Fragment>
     );
   }
