@@ -5,6 +5,7 @@ const { USER_TYPE } = require('../../shared/constants');
 const { User, Prescription, Medicine, MedicinePrescription } = db;
 
 
+
 module.exports = async () => {
   const drDat = await User.upsert({
     id: 2,
@@ -22,9 +23,10 @@ module.exports = async () => {
   const patient1 = await User.upsert({
     id: 3,
     doctor_id: 2,
-    patient_code: 'benhnhan01',
+    patient_code: 'NTN',
     password: '123456',
     name: 'Nguyễn Trần Nam',
+    phone: '0987321321',
     diagnose: 'Tim mạch',
     email: 'tandatit19@gmail.com',
     address: 'Hồ chí Minh',
