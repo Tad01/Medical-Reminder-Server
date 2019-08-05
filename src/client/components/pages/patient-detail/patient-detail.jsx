@@ -106,7 +106,7 @@ export default class extends Component {
                     </div>
                     <div>
                       <a
-                        className="btn btn-info btn-block my-4 btn1 w-75 text-center"
+                        className="btn btn-info btn-block my-4 btn1 w-100 text-center"
                         href={`/prescription-detail/${pre.id}`}
                       >
                         Xem chi tiết
