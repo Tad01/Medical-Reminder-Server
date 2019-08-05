@@ -100,7 +100,7 @@ export default class extends Component {
               <div className="flex-fill overflow-auto d-flex flex-wrap">
                 {patient ? patient.prescriptions.map(pre => (
                   <div className="col-md-4 mb-4 text-center">
-                    <div>{pre.diagnose}</div>
+                    <div><b>{pre.diagnose}</b></div>
                     <div>
                       <img src="https://image.flaticon.com/icons/svg/172/172813.svg" alt="" className="imgpres " />
                     </div>
