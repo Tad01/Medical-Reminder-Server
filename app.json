@@ -1,0 +1,25 @@
+{
+  "addons": [
+    "mongolab",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "Medical-Reminder-Server",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
