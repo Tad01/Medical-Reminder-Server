@@ -32,7 +32,7 @@
     "mdbootstrap": "^4.8.3",
     "mdbreact": "^4.14.0",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.25",
+    "moment-timezone": "^0.5.35",
     "mongodb": "^3.2.4",
     "mongoose": "^5.5.11",
     "path": "^0.12.7",
